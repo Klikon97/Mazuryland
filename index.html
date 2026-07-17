@@ -13,75 +13,75 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-  #kontakt,
-  .contact-section {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-    background: none !important;
-  }
+    #kontakt,
+    .contact-section {
+      position: relative !important;
+      overflow: hidden !important;
+      isolation: isolate !important;
+      background: none !important;
+    }
 
-  #kontakt::after,
-  .contact-section::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    background-image:
-      url("images/contact-bg.jpg"),
-      url("images/hero.jpg") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    filter: saturate(1.18) contrast(1.08) !important;
-  }
+    #kontakt::after,
+    .contact-section::after {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      background-image:
+        url("images/contact-bg.jpg"),
+        url("images/hero.jpg") !important;
+      background-size: cover !important;
+      background-position: center !important;
+      filter: saturate(1.18) contrast(1.08) !important;
+    }
 
-  #kontakt::before,
-  .contact-section::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(248, 243, 232, 0.22) 0%,
-        rgba(248, 243, 232, 0.06) 42%,
-        rgba(248, 243, 232, 0.00) 100%
-      ) !important;
-    pointer-events: none !important;
-  }
+    #kontakt::before,
+    .contact-section::before {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 1 !important;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(248, 243, 232, 0.22) 0%,
+          rgba(248, 243, 232, 0.06) 42%,
+          rgba(248, 243, 232, 0.00) 100%
+        ) !important;
+      pointer-events: none !important;
+    }
 
-  .contact-shade {
-    display: none !important;
-  }
+    .contact-shade {
+      display: none !important;
+    }
 
-  .contact-box {
-    position: relative !important;
-    z-index: 2 !important;
-  }
+    .contact-box {
+      position: relative !important;
+      z-index: 2 !important;
+    }
 
-  .contact-heading {
-    max-width: 570px !important;
-    padding: 26px 30px !important;
-    border-radius: 28px !important;
-    background: rgba(248, 243, 232, 0.12) !important;
-    backdrop-filter: blur(1px) !important;
-  }
+    .contact-heading {
+      max-width: 570px !important;
+      padding: 26px 30px !important;
+      border-radius: 28px !important;
+      background: rgba(248, 243, 232, 0.12) !important;
+      backdrop-filter: blur(1px) !important;
+    }
 
-  .contact-heading h2,
-  .contact-heading p,
-  .contact-heading .eyebrow {
-    text-shadow:
-      0 4px 18px rgba(248, 243, 232, 0.95),
-      0 2px 8px rgba(248, 243, 232, 0.85) !important;
-  }
+    .contact-heading h2,
+    .contact-heading p,
+    .contact-heading .eyebrow {
+      text-shadow:
+        0 4px 18px rgba(248, 243, 232, 0.95),
+        0 2px 8px rgba(248, 243, 232, 0.85) !important;
+    }
 
-  .contact-form {
-    position: relative !important;
-    z-index: 2 !important;
-    background: rgba(255, 255, 255, 0.84) !important;
-  }
-</style>
+    .contact-form {
+      position: relative !important;
+      z-index: 2 !important;
+      background: rgba(255, 255, 255, 0.84) !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -183,26 +183,32 @@
           <p>Umów się na spotkanie</p>
         </div>
 
-       <form class="contact-form" action="mailto:MAIL_KLIENTA" method="POST" enctype="text/plain">
-  <input
-    type="email"
-    name="E-mail"
-    placeholder="E-mail"
-    required
-  />
+        <form class="contact-form" action="https://formspree.io/f/xjgnybpp" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
 
-  <textarea
-    name="Wiadomość"
-    placeholder="Wiadomość"
-    required
-  ></textarea>
+          <textarea
+            name="message"
+            placeholder="Wiadomość"
+            required
+          ></textarea>
 
-  <button type="submit" class="btn btn-primary">Wyślij</button>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nowa wiadomość ze strony Mazuryland"
+          />
 
-  <p style="font-size: 14px; color: #5a6b63; margin-top: 6px;">
-    Możesz też napisać bezpośrednio: lukasz.mazuryland@gmail.com
-  </p>
-</form>
+          <button type="submit" class="btn btn-primary">Wyślij</button>
+
+          <p style="font-size: 14px; color: #5a6b63; margin-top: 6px;">
+            Możesz też napisać bezpośrednio: lukasz.mazuryland@gmail.com
+          </p>
+        </form>
       </div>
     </section>
 
