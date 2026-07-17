@@ -80,7 +80,97 @@
       position: relative !important;
       z-index: 2 !important;
       background: rgba(255, 255, 255, 0.84) !important;
-    }
+    }/* ===== O MNIE ===== */
+
+.about-section {
+  position: relative !important;
+  padding: 100px 0 !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(47, 133, 107, 0.16), transparent 32%),
+    radial-gradient(circle at 10% 85%, rgba(218, 165, 55, 0.15), transparent 30%),
+    linear-gradient(135deg, #f8f3e8 0%, #edf4ee 100%) !important;
+}
+
+.about-inner {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.about-content {
+  width: 100% !important;
+  max-width: 1050px !important;
+  padding: 55px 65px !important;
+  border: 1px solid rgba(24, 82, 60, 0.12) !important;
+  border-radius: 36px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 25px 70px rgba(18, 61, 43, 0.12) !important;
+}
+
+.about-content .eyebrow {
+  margin-bottom: 12px !important;
+  color: #b88423 !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+.about-content h2 {
+  margin: 0 0 18px !important;
+  color: #123d2b !important;
+  font-size: 52px !important;
+  line-height: 1.05 !important;
+}
+
+.about-content p {
+  max-width: 900px !important;
+  margin: 0 0 20px !important;
+  color: #344d43 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+.about-content p:first-of-type {
+  color: #163f2e !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+.about-content p:last-child {
+  display: inline-block !important;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  padding: 15px 22px !important;
+  border-radius: 999px !important;
+  background: #145b43 !important;
+  color: white !important;
+  font-size: 16px !important;
+}
+
+.about-content p:last-child strong {
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0 !important;
+  }
+
+  .about-content {
+    padding: 35px 24px !important;
+    border-radius: 26px !important;
+  }
+
+  .about-content h2 {
+    font-size: 38px !important;
+  }
+
+  .about-content p {
+    font-size: 16px !important;
+  }
+}
   </style>
 </head>
 <body>
