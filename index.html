@@ -183,23 +183,25 @@
           <p>Umów się na spotkanie</p>
         </div>
 
-        <form class="contact-form" action="https://formspree.io/f/xjgnybpp" method="POST">
+       <form class="contact-form" action="mailto:MAIL_KLIENTA" method="POST" enctype="text/plain">
   <input
     type="email"
-    name="email"
+    name="E-mail"
     placeholder="E-mail"
     required
   />
 
   <textarea
-    name="message"
+    name="Wiadomość"
     placeholder="Wiadomość"
     required
   ></textarea>
 
-  <input type="hidden" name="_subject" value="Nowa wiadomość ze strony Mazuryland" />
-
   <button type="submit" class="btn btn-primary">Wyślij</button>
+
+  <p style="font-size: 14px; color: #5a6b63; margin-top: 6px;">
+    Możesz też napisać bezpośrednio: lukasz.mazuryland@gmail.com
+  </p>
 </form>
       </div>
     </section>
