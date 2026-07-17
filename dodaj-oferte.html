@@ -1,3 +1,147 @@
-<div class="form-frame-box">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepdZWTkOCovWh3KzapgznaAJkyhWO2DkRZ62L_rhtbcNHQow/viewform?embedded=true"></iframe>
-</div>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dodaj ofertę — Mazuryland</title>
+  <meta name="description" content="Panel dodawania ofert Mazuryland." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .form-panel-page {
+      min-height: calc(100vh - 76px);
+      padding: 60px 0 80px;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(242, 195, 95, 0.22), transparent 28%),
+        radial-gradient(circle at 82% 22%, rgba(22, 136, 166, 0.20), transparent 34%),
+        linear-gradient(135deg, #f8f3e8 0%, #e3f2ec 45%, #d9eef3 100%);
+    }
+
+    .form-panel-header {
+      margin-bottom: 30px;
+      max-width: 820px;
+    }
+
+    .form-panel-header h1 {
+      margin-top: 12px;
+      font-size: clamp(38px, 5vw, 64px);
+      color: #123d2b;
+    }
+
+    .form-panel-header p {
+      margin-top: 14px;
+      color: #5a6b63;
+      font-size: 18px;
+    }
+
+    .form-actions {
+      margin: 22px 0 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .form-frame-box {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 18px;
+      box-shadow: 0 24px 70px rgba(7, 30, 21, 0.16);
+      border: 1px solid rgba(18, 61, 43, 0.12);
+      overflow: hidden;
+    }
+
+    .form-frame-box iframe {
+      width: 100%;
+      min-height: 1250px;
+      border: none;
+      display: block;
+    }
+
+    .form-panel-note {
+      margin-top: 18px;
+      color: #5a6b63;
+      font-size: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .form-panel-page {
+        padding: 36px 0 56px;
+      }
+
+      .form-frame-box {
+        padding: 8px;
+        border-radius: 20px;
+      }
+
+      .form-frame-box iframe {
+        min-height: 1350px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Mazuryland">
+        <span class="logo-icon">
+          <img src="images/logo.png" alt="Mazuryland" class="logo-img" />
+        </span>
+        <span class="logo-text">Mazuryland</span>
+      </a>
+
+      <nav class="nav" aria-label="Menu główne">
+        <a href="index.html#oferta">Oferta</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-panel-page">
+    <div class="container">
+      <div class="form-panel-header">
+        <p class="eyebrow">Panel ofert</p>
+        <h1>Dodaj ofertę działki</h1>
+        <p>
+          Wypełnij formularz dla każdej nowej oferty osobno. Po zapisaniu dane trafią do bazy ofert Mazuryland.
+        </p>
+
+        <div class="form-actions">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSepdZWTkOCovWh3KzapgznaAJkyhWO2DkRZ62L_rhtbcNHQow/viewform"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Otwórz formularz w nowej karcie
+          </a>
+        </div>
+      </div>
+
+      <div class="form-frame-box">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepdZWTkOCovWh3KzapgznaAJkyhWO2DkRZ62L_rhtbcNHQow/viewform?embedded=true">
+          Ładowanie formularza…
+        </iframe>
+      </div>
+
+      <p class="form-panel-note">
+        Jeśli formularz nie ładuje się poprawnie, użyj przycisku „Otwórz formularz w nowej karcie”.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© Mazuryland</p>
+
+      <div class="footer-links">
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <p>Działki na Warmii i Mazurach</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
