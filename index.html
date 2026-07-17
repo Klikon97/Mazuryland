@@ -169,7 +169,76 @@
 
   .about-content p {
     font-size: 16px !important;
-  }
+  }/* ===== WIĘCEJ KOLORU W SEKCJI O MNIE ===== */
+
+.about-section {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(25, 132, 150, 0.28), transparent 30%),
+    radial-gradient(circle at 10% 88%, rgba(218, 165, 55, 0.22), transparent 28%),
+    linear-gradient(135deg, #f8f3e8 0%, #e4f1ec 48%, #cfe8ed 100%) !important;
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34%;
+  height: 100%;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 91, 67, 0.96) 0%,
+      rgba(20, 119, 132, 0.90) 100%
+    );
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+  opacity: 0.95;
+}
+
+.about-inner {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.about-content {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.91) 72%,
+      rgba(239, 249, 247, 0.93) 100%
+    ) !important;
+  border: 1px solid rgba(18, 91, 67, 0.16) !important;
+}
+
+.about-content::after {
+  content: "Warmia i Mazury";
+  position: absolute;
+  right: 30px;
+  bottom: 26px;
+  color: rgba(18, 91, 67, 0.10);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.about-content .eyebrow {
+  color: #c18b22 !important;
+}
+
+.about-content h2 {
+  color: #0f513b !important;
+}
+
+.about-content p:last-child {
+  background:
+    linear-gradient(135deg, #145b43 0%, #147789 100%) !important;
+}
 }
   </style>
 </head>
