@@ -280,13 +280,14 @@ h3 {
   background:
     linear-gradient(
       180deg,
-      rgba(5, 20, 14, 0.02) 0%,
-      rgba(5, 20, 14, 0.28) 42%,
-      rgba(5, 20, 14, 0.84) 100%
+      rgba(5, 20, 14, 0.00) 0%,
+      rgba(5, 20, 14, 0.12) 38%,
+      rgba(5, 20, 14, 0.64) 100%
     );
   z-index: 1;
   transition: 0.28s ease;
 }
+
 
 .tile::after {
   content: "";
@@ -312,10 +313,11 @@ h3 {
     linear-gradient(
       180deg,
       rgba(5, 20, 14, 0.00) 0%,
-      rgba(5, 20, 14, 0.22) 36%,
-      rgba(5, 20, 14, 0.74) 100%
+      rgba(5, 20, 14, 0.08) 36%,
+      rgba(5, 20, 14, 0.56) 100%
     );
 }
+
 
 .tile:hover::after {
   transform: scale(1.2);
@@ -337,7 +339,7 @@ h3 {
   z-index: 3;
   color: var(--white);
   font-weight: 950;
-  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
+ text-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
 }
 
 .tile-budowlane {
@@ -1269,4 +1271,247 @@ textarea:focus {
   .offer-detail-panel h1 {
     font-size: 32px;
   }
+/* MOCNIEJSZE ZDJĘCIE W SEKCJI KONTAKT */
+
+.contact-section {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 243, 232, 0.58) 0%,
+      rgba(248, 243, 232, 0.28) 42%,
+      rgba(248, 243, 232, 0.02) 100%
+    ),
+    url("images/contact-bg.jpg"),
+    url("images/hero.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.contact-shade {
+  display: none !important;
+}
+
+.contact-heading {
+  max-width: 560px;
+  padding: 24px 28px;
+  border-radius: 28px;
+  background: rgba(248, 243, 232, 0.34);
+  backdrop-filter: blur(3px);
+}
+
+.contact-heading h2,
+.contact-heading p,
+.contact-heading .eyebrow {
+  text-shadow: 0 5px 22px rgba(248, 243, 232, 0.95);
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.88) !important;
+}/* FINAL — mocniejsze zdjęcie w kontakcie */
+
+.contact-section {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 243, 232, 0.36) 0%,
+      rgba(248, 243, 232, 0.12) 42%,
+      rgba(248, 243, 232, 0.00) 100%
+    ),
+    url("images/contact-bg.jpg"),
+    url("images/hero.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.contact-shade {
+  display: none !important;
+}
+
+.contact-heading {
+  max-width: 570px !important;
+  padding: 26px 30px !important;
+  border-radius: 28px !important;
+  background: rgba(248, 243, 232, 0.22) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.contact-heading h2,
+.contact-heading p,
+.contact-heading .eyebrow {
+  text-shadow:
+    0 4px 18px rgba(248, 243, 232, 0.95),
+    0 2px 8px rgba(248, 243, 232, 0.85) !important;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.84) !important;
+}/* KONTAKT — finalna wersja, zdjęcie dużo bardziej widoczne */
+
+.contact-section {
+  position: relative !important;
+  isolation: isolate !important;
+  background:
+    url("images/contact-bg.jpg"),
+    url("images/hero.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.contact-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 243, 232, 0.50) 0%,
+      rgba(248, 243, 232, 0.22) 38%,
+      rgba(248, 243, 232, 0.00) 72%
+    ) !important;
+  pointer-events: none !important;
+}
+
+.contact-shade {
+  display: none !important;
+}
+
+.contact-box {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.contact-heading {
+  max-width: 570px !important;
+  padding: 26px 30px !important;
+  border-radius: 28px !important;
+  background: rgba(248, 243, 232, 0.28) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.contact-heading h2,
+.contact-heading p,
+.contact-heading .eyebrow {
+  text-shadow:
+    0 4px 18px rgba(248, 243, 232, 0.98),
+    0 2px 8px rgba(248, 243, 232, 0.9) !important;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.86) !important;
+}.contact-section {
+  border: 10px solid red !important;
+}/* ===== O MNIE ===== */
+
+.about-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(47, 133, 107, 0.16), transparent 32%),
+    radial-gradient(circle at 10% 85%, rgba(218, 165, 55, 0.15), transparent 30%),
+    linear-gradient(135deg, #f8f3e8 0%, #edf4ee 100%);
+}
+
+.about-section::before {
+  content: "MAZURYLAND";
+  position: absolute;
+  right: -20px;
+  top: 40px;
+  font-size: clamp(70px, 10vw, 160px);
+  font-weight: 900;
+  letter-spacing: 8px;
+  color: rgba(18, 77, 55, 0.045);
+  pointer-events: none;
+}
+
+.about-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 1050px;
+  padding: 55px 65px;
+  border: 1px solid rgba(24, 82, 60, 0.12);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 25px 70px rgba(18, 61, 43, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.about-content .eyebrow {
+  margin-bottom: 12px;
+  color: #b88423;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-content h2 {
+  margin: 0 0 18px;
+  color: #123d2b;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1;
+}
+
+.about-content p {
+  max-width: 900px;
+  margin: 0 0 20px;
+  color: #344d43;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-content p:first-of-type {
+  color: #163f2e;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.about-content p:last-child {
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 15px 22px;
+  border-radius: 999px;
+  background: #145b43;
+  color: #ffffff;
+  font-size: 16px;
+  box-shadow: 0 12px 30px rgba(20, 91, 67, 0.22);
+}
+
+.about-content p:last-child strong {
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-content {
+    padding: 35px 24px;
+    border-radius: 26px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .about-content p:first-of-type {
+    font-size: 19px;
+  }
+
+  .about-content p:last-child {
+    display: block;
+    border-radius: 18px;
+    line-height: 1.5;
+  }
+}
 }
