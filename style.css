@@ -1513,5 +1513,103 @@ textarea:focus {
     border-radius: 18px;
     line-height: 1.5;
   }
+}/* ===== SZCZEGÓŁY OFERTY - GALERIA ===== */
+
+.offer-detail-section {
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.offer-detail-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr) !important;
+  gap: 42px !important;
+  align-items: start !important;
+}
+
+.offer-gallery {
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.offer-detail-photo {
+  width: 100% !important;
+  height: 560px !important;
+  overflow: hidden !important;
+  border-radius: 30px !important;
+  background: #e9eee9;
+}
+
+.offer-detail-photo img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+}
+
+.offer-detail-panel {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.offer-gallery-thumbs {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 10px !important;
+  margin-top: 14px !important;
+}
+
+.offer-gallery-thumb {
+  width: 100% !important;
+  height: 90px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  background: transparent !important;
+}
+
+.offer-gallery-thumb img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.2s ease !important;
+}
+
+.offer-gallery-thumb:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 950px) {
+  .offer-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .offer-detail-photo {
+    height: 430px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .offer-detail-section {
+    padding: 35px 0;
+  }
+
+  .offer-detail-photo {
+    height: 300px !important;
+    border-radius: 20px !important;
+  }
+
+  .offer-gallery-thumbs {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .offer-gallery-thumb {
+    height: 75px !important;
+  }
 }
 }
