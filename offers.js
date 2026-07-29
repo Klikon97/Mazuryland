@@ -3,6 +3,7 @@ const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-fHyp6kmJa2YB
 const CATEGORY_IMAGES = {
   "Działki budowlane": "images/budowlane.jpg",
   "Działki rolne powyżej 3000 m²": "images/rolne.jpg",
+  "Grunty z warunkami zabudowy pow. 3000m²": "images/rolne.jpg",
   "Kameralne osady": "images/osady.jpg",
   "Działki z linią brzegową": "images/linia-brzegowa.jpg",
   "Grunty inwestycyjne": "images/inwestycyjne.jpg",
@@ -224,19 +225,45 @@ function getOfferData(offer) {
     "Najważniejsze informacje"
   ]);
 
-  const imagesRaw = getValue(offer, [
-    "Zdjęcia działki",
-    "Zdjęcia",
+  const mainImageRaw = getValue(offer, [
+    "Główne zdjęcie oferty",
+    "Zdjęcie główne oferty",
+    "Główne zdjęcie",
     "Link do zdjęcia głównego",
     "Link do zdjęcia",
     "link do zdjęcia"
+  ]);
+
+  const galleryRaw = getValue(offer, [
+    "Zdjęcia działki",
+    "Zdjęcia"
   ]);
 
   const fallbackImage =
     CATEGORY_IMAGES[category] ||
     "images/hero.jpg";
 
-  const images = getImagesFromCell(imagesRaw);
+  const mainImages = getImagesFromCell(mainImageRaw);
+  const galleryImages = getImagesFromCell(galleryRaw);
+
+  const mainImage =
+    mainImages[0] ||
+    galleryImages[0] ||
+    fallbackImage;
+
+  const images = [];
+
+  if (mainImages[0]) {
+    images.push(mainImages[0]);
+  } else if (galleryImages[0]) {
+    images.push(galleryImages[0]);
+  }
+
+  galleryImages.forEach(image => {
+    if (!images.includes(image)) {
+      images.push(image);
+    }
+  });
 
   return {
     id: offer._id,
@@ -248,7 +275,7 @@ function getOfferData(offer) {
     status,
     info,
     images,
-    image: images.length ? images[0] : fallbackImage,
+    image: mainImage,
     fallbackImage
   };
 }
