@@ -80,176 +80,292 @@
       position: relative !important;
       z-index: 2 !important;
       background: rgba(255, 255, 255, 0.84) !important;
-    }/* ===== O MNIE ===== */
+    }
 
-.about-section {
-  position: relative !important;
-  padding: 100px 0 !important;
-  overflow: hidden !important;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(47, 133, 107, 0.16), transparent 32%),
-    radial-gradient(circle at 10% 85%, rgba(218, 165, 55, 0.15), transparent 30%),
-    linear-gradient(135deg, #f8f3e8 0%, #edf4ee 100%) !important;
-}
+    /* ===== O MNIE ===== */
 
-.about-inner {
-  position: relative !important;
-  display: flex !important;
-  justify-content: center !important;
-}
+    .about-section {
+      position: relative !important;
+      padding: 100px 0 !important;
+      overflow: hidden !important;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(47, 133, 107, 0.16), transparent 32%),
+        radial-gradient(circle at 10% 85%, rgba(218, 165, 55, 0.15), transparent 30%),
+        linear-gradient(135deg, #f8f3e8 0%, #edf4ee 100%) !important;
+    }
 
-.about-content {
-  width: 100% !important;
-  max-width: 1050px !important;
-  padding: 55px 65px !important;
-  border: 1px solid rgba(24, 82, 60, 0.12) !important;
-  border-radius: 36px !important;
-  background: rgba(255, 255, 255, 0.82) !important;
-  box-shadow: 0 25px 70px rgba(18, 61, 43, 0.12) !important;
-}
+    .about-inner {
+      position: relative !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
 
-.about-content .eyebrow {
-  margin-bottom: 12px !important;
-  color: #b88423 !important;
-  font-size: 14px !important;
-  font-weight: 900 !important;
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-}
+    .about-content {
+      width: 100% !important;
+      max-width: 1050px !important;
+      padding: 55px 65px !important;
+      border: 1px solid rgba(24, 82, 60, 0.12) !important;
+      border-radius: 36px !important;
+      background: rgba(255, 255, 255, 0.82) !important;
+      box-shadow: 0 25px 70px rgba(18, 61, 43, 0.12) !important;
+    }
 
-.about-content h2 {
-  margin: 0 0 18px !important;
-  color: #123d2b !important;
-  font-size: 52px !important;
-  line-height: 1.05 !important;
-}
+    .about-content .eyebrow {
+      margin-bottom: 12px !important;
+      color: #b88423 !important;
+      font-size: 14px !important;
+      font-weight: 900 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+    }
 
-.about-content p {
-  max-width: 900px !important;
-  margin: 0 0 20px !important;
-  color: #344d43 !important;
-  font-size: 18px !important;
-  line-height: 1.8 !important;
-}
+    .about-content h2 {
+      margin: 0 0 18px !important;
+      color: #123d2b !important;
+      font-size: 52px !important;
+      line-height: 1.05 !important;
+    }
 
-.about-content p:first-of-type {
-  color: #163f2e !important;
-  font-size: 22px !important;
-  font-weight: 700 !important;
-}
+    .about-content p {
+      max-width: 900px !important;
+      margin: 0 0 20px !important;
+      color: #344d43 !important;
+      font-size: 18px !important;
+      line-height: 1.8 !important;
+    }
 
-.about-content p:last-child {
-  display: inline-block !important;
-  margin-top: 10px !important;
-  margin-bottom: 0 !important;
-  padding: 15px 22px !important;
-  border-radius: 999px !important;
-  background: #145b43 !important;
-  color: white !important;
-  font-size: 16px !important;
-}
+    .about-content p:first-of-type {
+      color: #163f2e !important;
+      font-size: 22px !important;
+      font-weight: 700 !important;
+    }
 
-.about-content p:last-child strong {
-  color: white !important;
-}
+    .about-content p:last-child {
+      display: inline-block !important;
+      margin-top: 10px !important;
+      margin-bottom: 0 !important;
+      padding: 15px 22px !important;
+      border-radius: 999px !important;
+      background: #145b43 !important;
+      color: white !important;
+      font-size: 16px !important;
+    }
 
-@media (max-width: 768px) {
-  .about-section {
-    padding: 60px 0 !important;
-  }
+    .about-content p:last-child strong {
+      color: white !important;
+    }
 
-  .about-content {
-    padding: 35px 24px !important;
-    border-radius: 26px !important;
-  }
+    /* ===== WIĘCEJ KOLORU W SEKCJI O MNIE ===== */
 
-  .about-content h2 {
-    font-size: 38px !important;
-  }
+    .about-section {
+      background:
+        radial-gradient(circle at 88% 18%, rgba(25, 132, 150, 0.28), transparent 30%),
+        radial-gradient(circle at 10% 88%, rgba(218, 165, 55, 0.22), transparent 28%),
+        linear-gradient(135deg, #f8f3e8 0%, #e4f1ec 48%, #cfe8ed 100%) !important;
+    }
 
-  .about-content p {
-    font-size: 16px !important;
-  }/* ===== WIĘCEJ KOLORU W SEKCJI O MNIE ===== */
+    .about-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 34%;
+      height: 100%;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(18, 91, 67, 0.96) 0%,
+          rgba(20, 119, 132, 0.90) 100%
+        );
+      clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 0;
+      opacity: 0.95;
+    }
 
-.about-section {
-  background:
-    radial-gradient(circle at 88% 18%, rgba(25, 132, 150, 0.28), transparent 30%),
-    radial-gradient(circle at 10% 88%, rgba(218, 165, 55, 0.22), transparent 28%),
-    linear-gradient(135deg, #f8f3e8 0%, #e4f1ec 48%, #cfe8ed 100%) !important;
-}
+    .about-inner {
+      position: relative !important;
+      z-index: 1 !important;
+    }
 
-.about-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 34%;
-  height: 100%;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(18, 91, 67, 0.96) 0%,
-      rgba(20, 119, 132, 0.90) 100%
-    );
-  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 0;
-  opacity: 0.95;
-}
+    .about-content {
+      position: relative !important;
+      overflow: hidden !important;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.96) 0%,
+          rgba(255, 255, 255, 0.91) 72%,
+          rgba(239, 249, 247, 0.93) 100%
+        ) !important;
+      border: 1px solid rgba(18, 91, 67, 0.16) !important;
+    }
 
-.about-inner {
-  position: relative !important;
-  z-index: 1 !important;
-}
+    .about-content::after {
+      content: "Warmia i Mazury";
+      position: absolute;
+      right: 30px;
+      bottom: 26px;
+      color: rgba(18, 91, 67, 0.10);
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
 
-.about-content {
-  position: relative !important;
-  overflow: hidden !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.96) 0%,
-      rgba(255, 255, 255, 0.91) 72%,
-      rgba(239, 249, 247, 0.93) 100%
-    ) !important;
-  border: 1px solid rgba(18, 91, 67, 0.16) !important;
-}
+    .about-content .eyebrow {
+      color: #c18b22 !important;
+    }
 
-.about-content::after {
-  content: "Warmia i Mazury";
-  position: absolute;
-  right: 30px;
-  bottom: 26px;
-  color: rgba(18, 91, 67, 0.10);
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  pointer-events: none;
-}
+    .about-content h2 {
+      color: #0f513b !important;
+    }
 
-.about-content .eyebrow {
-  color: #c18b22 !important;
-}
+    .about-content p:last-child {
+      background:
+        linear-gradient(135deg, #145b43 0%, #147789 100%) !important;
+    }
 
-.about-content h2 {
-  color: #0f513b !important;
-}
+    /* ===== POZNAJ BLANKI ===== */
 
-.about-content p:last-child {
-  background:
-    linear-gradient(135deg, #145b43 0%, #147789 100%) !important;
-}
-}
+    .blanki-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 0;
+      background:
+        radial-gradient(circle at 82% 30%, rgba(44, 161, 179, 0.28), transparent 28%),
+        linear-gradient(
+          135deg,
+          #103d2c 0%,
+          #145b43 52%,
+          #147789 100%
+        );
+    }
+
+    .blanki-cta::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -70px;
+      top: -100px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      pointer-events: none;
+    }
+
+    .blanki-cta-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+    }
+
+    .blanki-cta-text {
+      max-width: 720px;
+    }
+
+    .blanki-cta-text .eyebrow {
+      margin: 0 0 8px;
+      color: #e4b95f;
+    }
+
+    .blanki-cta-text h2 {
+      margin: 0 0 9px;
+      color: #ffffff;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.05;
+    }
+
+    .blanki-cta-text p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .blanki-cta-link {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 190px;
+      padding: 17px 26px;
+      border-radius: 999px;
+      background: #f8f3e8;
+      color: #123d2b;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 14px 35px rgba(5, 36, 25, 0.22);
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .blanki-cta-link:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      box-shadow: 0 18px 40px rgba(5, 36, 25, 0.28);
+    }
+
+    .blanki-cta-arrow {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 60px 0 !important;
+      }
+
+      .about-content {
+        padding: 35px 24px !important;
+        border-radius: 26px !important;
+      }
+
+      .about-content h2 {
+        font-size: 38px !important;
+      }
+
+      .about-content p {
+        font-size: 16px !important;
+      }
+
+      .about-content::after {
+        display: none;
+      }
+
+      .blanki-cta {
+        padding: 40px 0;
+      }
+
+      .blanki-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .blanki-cta-link {
+        width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header class="header">
     <div class="container header-inner">
+
       <a href="index.html" class="logo" aria-label="Mazuryland">
         <span class="logo-icon">
           <img src="images/logo.png" alt="Mazuryland" class="logo-img" />
         </span>
+
         <span class="logo-text">Mazuryland</span>
       </a>
 
@@ -258,22 +374,27 @@
         <a href="#onas">O mnie</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
+
     </div>
   </header>
+
 
   <main>
 
     <section id="oferta" class="offer-section offer-landing">
+
       <div class="offer-ambient offer-ambient-one"></div>
       <div class="offer-ambient offer-ambient-two"></div>
       <div class="offer-waterline"></div>
 
       <div class="container offer-inner">
+
         <div class="section-title offer-title">
           <p class="eyebrow">Oferta</p>
         </div>
 
         <div class="tiles-grid">
+
           <a href="tereny-pod-zabudowe.html" class="tile tile-budowlane">
             <span class="tile-number">01</span>
             <h3>Działki budowlane</h3>
@@ -281,7 +402,7 @@
 
           <a href="dzialki-rolne.html" class="tile tile-rolne">
             <span class="tile-number">02</span>
-            <h3>Grunty z warunkami zabudowy pow. 3000m²</h3>
+            <h3>Grunty z warunkami zabudowy powyżej 3000m² </h3>
           </a>
 
           <a href="kameralne-osady.html" class="tile tile-osady">
@@ -303,13 +424,19 @@
             <span class="tile-number">06</span>
             <h3>Duże areały</h3>
           </a>
+
         </div>
       </div>
+
     </section>
 
+
     <section class="hero">
+
       <div class="container hero-inner">
+
         <div class="hero-content">
+
           <p class="eyebrow">Warmia i Mazury</p>
 
           <h1>Działki w wyjątkowych lokalizacjach regionu</h1>
@@ -319,23 +446,38 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#oferta" class="btn btn-primary">Zobacz ofertę</a>
-            <a href="#kontakt" class="btn btn-outline">Kontakt</a>
+            <a href="#oferta" class="btn btn-primary">
+              Zobacz ofertę
+            </a>
+
+            <a href="#kontakt" class="btn btn-outline">
+              Kontakt
+            </a>
           </div>
+
         </div>
 
+
         <div class="hero-photo" aria-hidden="true">
+
           <div class="hero-photo-badge">
             <span>Mazuryland</span>
             <p>dom • inwestycja • wypoczynek</p>
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+
     <section id="onas" class="about-section">
+
       <div class="container about-inner">
+
         <div class="about-content">
+
           <p class="eyebrow">O mnie</p>
 
           <h2>Dzień dobry,</h2>
@@ -354,22 +496,42 @@
             Przekonałem Cię? To zapraszam do kontaktu, jeżeli nie to również zapraszam, rozwieje wszystkie wątpliwości i odpowiem na nurtujące Cię pytania
           </p>
 
-          <p><strong>Kontakt 👉🏻 lukasz.mazuryland@gmail.com</strong></p>
+          <p>
+            <strong>
+              Kontakt 👉🏻 lukasz.mazuryland@gmail.com
+            </strong>
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
+
     <section id="kontakt" class="contact-section">
+
       <div class="contact-shade"></div>
 
       <div class="container contact-box">
+
         <div class="contact-heading">
+
           <p class="eyebrow">Kontakt</p>
+
           <h2>Szukamy działek na zlecenie</h2>
+
           <p>Umów się na spotkanie</p>
+
         </div>
 
-        <form class="contact-form" action="https://formspree.io/f/xjgnybpp" method="POST">
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xjgnybpp"
+          method="POST"
+        >
+
           <input
             type="email"
             name="email"
@@ -389,26 +551,86 @@
             value="Nowa wiadomość ze strony Mazuryland"
           />
 
-          <button type="submit" class="btn btn-primary">Wyślij</button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Wyślij
+          </button>
 
-          <p style="font-size: 14px; color: #5a6b63; margin-top: 6px;">
+          <p
+            style="
+              font-size: 14px;
+              color: #5a6b63;
+              margin-top: 6px;
+            "
+          >
             Możesz też napisać bezpośrednio: lukasz.mazuryland@gmail.com
           </p>
+
         </form>
+
       </div>
+
+    </section>
+
+
+    <section class="blanki-cta">
+
+      <div class="container blanki-cta-inner">
+
+        <div class="blanki-cta-text">
+
+          <p class="eyebrow">
+            Działki budowlane
+          </p>
+
+          <h2>
+            Poznaj Blanki
+          </h2>
+
+          <p>
+            Zobacz ofertę działek budowlanych w spokojnej, mazurskiej lokalizacji.
+          </p>
+
+        </div>
+
+
+        <a
+          href="https://www.blanki-dzialkibudowlane.pl/"
+          class="blanki-cta-link"
+        >
+          Poznaj Blanki
+          <span class="blanki-cta-arrow">→</span>
+        </a>
+
+      </div>
+
     </section>
 
   </main>
 
+
   <footer class="footer">
+
     <div class="container footer-inner">
+
       <p>© Mazuryland</p>
 
       <div class="footer-links">
-        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
-        <p>Działki na Warmii i Mazurach</p>
+
+        <a href="polityka-prywatnosci.html">
+          Polityka prywatności
+        </a>
+
+        <p>
+          Działki na Warmii i Mazurach
+        </p>
+
       </div>
+
     </div>
+
   </footer>
 
 </body>
