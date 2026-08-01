@@ -614,8 +614,12 @@ async function loadOffers() {
 
   try {
 
-    const response =
-      await fetch(CSV_URL);
+    const response = await fetch(
+  `${CSV_URL}&cache=${Date.now()}`,
+  {
+    cache: "no-store"
+  }
+);
 
     if (!response.ok) {
       throw new Error(
