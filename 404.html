@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nie znaleziono strony — Mazuryland</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="style.css?v=20260801-1" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <style>
+    .not-found {
+      min-height: calc(100vh - 148px);
+      display: grid;
+      place-items: center;
+      padding: 70px 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(242, 195, 95, 0.18), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(22, 136, 166, 0.18), transparent 30%),
+        var(--cream);
+    }
+
+    .not-found-box {
+      max-width: 760px;
+      padding: 48px;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+    }
+
+    .not-found-box h1 {
+      margin: 12px 0 18px;
+      font-size: clamp(40px, 7vw, 72px);
+    }
+
+    .not-found-box p {
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .not-found-box { padding: 32px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Mazuryland">
+        <span class="logo-icon"><img src="images/logo.png" alt="Mazuryland" class="logo-img" width="35" height="35" /></span>
+        <span class="logo-text">Mazuryland</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="not-found">
+    <div class="container not-found-box">
+      <p class="eyebrow">Błąd 404</p>
+      <h1>Nie znaleziono strony</h1>
+      <p>Adres mógł się zmienić albo strona już nie istnieje.</p>
+      <a href="index.html#oferta" class="btn btn-primary">Wróć do ofert</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><p>© Mazuryland</p></div>
+  </footer>
+</body>
+</html>

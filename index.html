@@ -10,7 +10,8 @@
     content="Mazuryland — działki budowlane, rolne, inwestycyjne, z linią brzegową oraz duże areały na Warmii i Mazurach."
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20260801-1" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
 
   <style>
     #kontakt,
@@ -28,7 +29,6 @@
       inset: 0 !important;
       z-index: 0 !important;
       background-image:
-        url("images/contact-bg.jpg"),
         url("images/hero.jpg") !important;
       background-size: cover !important;
       background-position: center !important;
@@ -363,7 +363,7 @@
 
       <a href="index.html" class="logo" aria-label="Mazuryland">
         <span class="logo-icon">
-          <img src="images/logo.png" alt="Mazuryland" class="logo-img" />
+          <img src="images/logo.png" alt="Mazuryland" class="logo-img" width="35" height="35" />
         </span>
 
         <span class="logo-text">Mazuryland</span>
@@ -498,7 +498,7 @@
 
           <p>
             <strong>
-              Kontakt 👉🏻 lukasz.mazuryland@gmail.com
+              Kontakt 👉🏻 <a href="mailto:lukasz.mazuryland@gmail.com">lukasz.mazuryland@gmail.com</a>
             </strong>
           </p>
 
@@ -536,12 +536,15 @@
             type="email"
             name="email"
             placeholder="E-mail"
+            aria-label="Adres e-mail"
+            autocomplete="email"
             required
           />
 
           <textarea
             name="message"
             placeholder="Wiadomość"
+            aria-label="Treść wiadomości"
             required
           ></textarea>
 
@@ -558,14 +561,14 @@
             Wyślij
           </button>
 
-          <p
-            style="
-              font-size: 14px;
-              color: #5a6b63;
-              margin-top: 6px;
-            "
-          >
-            Możesz też napisać bezpośrednio: lukasz.mazuryland@gmail.com
+          <p style="font-size: 14px; color: #5a6b63; margin-top: 6px;">
+            Możesz też napisać bezpośrednio:
+            <a href="mailto:lukasz.mazuryland@gmail.com"><strong>lukasz.mazuryland@gmail.com</strong></a>
+          </p>
+
+          <p class="contact-privacy-note">
+            Informacje o przetwarzaniu danych znajdziesz w
+            <a href="polityka-prywatnosci.html">polityce prywatności</a>.
           </p>
 
         </form>

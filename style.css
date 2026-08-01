@@ -793,7 +793,6 @@ h3 {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(248, 243, 232, 0.92) 0%, rgba(248, 243, 232, 0.78) 48%, rgba(248, 243, 232, 0.62) 100%),
-    url("images/contact-bg.jpg"),
     url("images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -1255,138 +1254,73 @@ textarea:focus {
   margin-bottom: 10px;
 }
 
-@media (max-width: 900px) {
+
+
+/* RESPONSYWNOŚĆ AUTOMATYCZNYCH OFERT */
+
+@media (max-width: 1100px) {
+  #offers-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
   #offers-list {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .offer-detail-grid {
-    grid-template-columns: 1fr;
+  .auto-offer-image {
+    height: 220px;
   }
 
-  .offer-detail-photo img {
-    height: 380px;
+  .auto-offer-content {
+    padding: 22px;
   }
 
-  .offer-detail-panel h1 {
-    font-size: 32px;
+  .auto-offer-content h3 {
+    font-size: 22px;
   }
-/* MOCNIEJSZE ZDJĘCIE W SEKCJI KONTAKT */
+}
+
+/* KONTAKT — finalna, czysta wersja */
 
 .contact-section {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(248, 243, 232, 0.58) 0%,
-      rgba(248, 243, 232, 0.28) 42%,
-      rgba(248, 243, 232, 0.02) 100%
-    ),
-    url("images/contact-bg.jpg"),
-    url("images/hero.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-.contact-shade {
-  display: none !important;
-}
-
-.contact-heading {
-  max-width: 560px;
-  padding: 24px 28px;
-  border-radius: 28px;
-  background: rgba(248, 243, 232, 0.34);
-  backdrop-filter: blur(3px);
-}
-
-.contact-heading h2,
-.contact-heading p,
-.contact-heading .eyebrow {
-  text-shadow: 0 5px 22px rgba(248, 243, 232, 0.95);
-}
-
-.contact-form {
-  background: rgba(255, 255, 255, 0.88) !important;
-}/* FINAL — mocniejsze zdjęcie w kontakcie */
-
-.contact-section {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(248, 243, 232, 0.36) 0%,
-      rgba(248, 243, 232, 0.12) 42%,
-      rgba(248, 243, 232, 0.00) 100%
-    ),
-    url("images/contact-bg.jpg"),
-    url("images/hero.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-.contact-shade {
-  display: none !important;
-}
-
-.contact-heading {
-  max-width: 570px !important;
-  padding: 26px 30px !important;
-  border-radius: 28px !important;
-  background: rgba(248, 243, 232, 0.22) !important;
-  backdrop-filter: blur(2px) !important;
-}
-
-.contact-heading h2,
-.contact-heading p,
-.contact-heading .eyebrow {
-  text-shadow:
-    0 4px 18px rgba(248, 243, 232, 0.95),
-    0 2px 8px rgba(248, 243, 232, 0.85) !important;
-}
-
-.contact-form {
-  background: rgba(255, 255, 255, 0.84) !important;
-}/* KONTAKT — finalna wersja, zdjęcie dużo bardziej widoczne */
-
-.contact-section {
-  position: relative !important;
-  isolation: isolate !important;
-  background:
-    url("images/contact-bg.jpg"),
-    url("images/hero.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: url("images/hero.jpg") center / cover no-repeat;
 }
 
 .contact-section::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(248, 243, 232, 0.50) 0%,
-      rgba(248, 243, 232, 0.22) 38%,
-      rgba(248, 243, 232, 0.00) 72%
-    ) !important;
-  pointer-events: none !important;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 243, 232, 0.50) 0%,
+    rgba(248, 243, 232, 0.22) 38%,
+    rgba(248, 243, 232, 0) 72%
+  );
+  pointer-events: none;
 }
 
 .contact-shade {
-  display: none !important;
+  display: none;
 }
 
 .contact-box {
-  position: relative !important;
-  z-index: 2 !important;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-heading {
-  max-width: 570px !important;
-  padding: 26px 30px !important;
-  border-radius: 28px !important;
-  background: rgba(248, 243, 232, 0.28) !important;
-  backdrop-filter: blur(2px) !important;
+  max-width: 570px;
+  padding: 26px 30px;
+  border-radius: 28px;
+  background: rgba(248, 243, 232, 0.28);
+  backdrop-filter: blur(2px);
 }
 
 .contact-heading h2,
@@ -1394,35 +1328,49 @@ textarea:focus {
 .contact-heading .eyebrow {
   text-shadow:
     0 4px 18px rgba(248, 243, 232, 0.98),
-    0 2px 8px rgba(248, 243, 232, 0.9) !important;
+    0 2px 8px rgba(248, 243, 232, 0.90);
 }
 
 .contact-form {
-  background: rgba(255, 255, 255, 0.86) !important;
-}.contact-section {
-  border: 10px solid red !important;
-}/* ===== O MNIE ===== */
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.contact-privacy-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-privacy-note a {
+  color: var(--green);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* O MNIE — finalna, czysta wersja */
 
 .about-section {
   position: relative;
   padding: 100px 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 85% 20%, rgba(47, 133, 107, 0.16), transparent 32%),
-    radial-gradient(circle at 10% 85%, rgba(218, 165, 55, 0.15), transparent 30%),
-    linear-gradient(135deg, #f8f3e8 0%, #edf4ee 100%);
+    radial-gradient(circle at 88% 18%, rgba(25, 132, 150, 0.28), transparent 30%),
+    radial-gradient(circle at 10% 88%, rgba(218, 165, 55, 0.22), transparent 28%),
+    linear-gradient(135deg, #f8f3e8 0%, #e4f1ec 48%, #cfe8ed 100%);
 }
 
-.about-section::before {
-  content: "MAZURYLAND";
+.about-section::after {
+  content: "";
   position: absolute;
-  right: -20px;
-  top: 40px;
-  font-size: clamp(70px, 10vw, 160px);
-  font-weight: 900;
-  letter-spacing: 8px;
-  color: rgba(18, 77, 55, 0.045);
-  pointer-events: none;
+  top: 0;
+  right: 0;
+  width: 34%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(18, 91, 67, 0.96), rgba(20, 119, 132, 0.90));
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+  opacity: 0.95;
 }
 
 .about-inner {
@@ -1433,19 +1381,38 @@ textarea:focus {
 }
 
 .about-content {
+  position: relative;
   width: 100%;
   max-width: 1050px;
   padding: 55px 65px;
-  border: 1px solid rgba(24, 82, 60, 0.12);
+  overflow: hidden;
+  border: 1px solid rgba(18, 91, 67, 0.16);
   border-radius: 36px;
-  background: rgba(255, 255, 255, 0.78);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.91) 72%,
+    rgba(239, 249, 247, 0.93) 100%
+  );
   box-shadow: 0 25px 70px rgba(18, 61, 43, 0.12);
-  backdrop-filter: blur(10px);
+}
+
+.about-content::after {
+  content: "Warmia i Mazury";
+  position: absolute;
+  right: 30px;
+  bottom: 26px;
+  color: rgba(18, 91, 67, 0.10);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  pointer-events: none;
 }
 
 .about-content .eyebrow {
   margin-bottom: 12px;
-  color: #b88423;
+  color: #c18b22;
   font-size: 14px;
   font-weight: 900;
   letter-spacing: 2px;
@@ -1454,9 +1421,9 @@ textarea:focus {
 
 .about-content h2 {
   margin: 0 0 18px;
-  color: #123d2b;
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1;
+  color: #0f513b;
+  font-size: 52px;
+  line-height: 1.05;
 }
 
 .about-content p {
@@ -1474,19 +1441,132 @@ textarea:focus {
 }
 
 .about-content p:last-child {
-  display: inline-flex;
+  display: inline-block;
   margin-top: 10px;
   margin-bottom: 0;
   padding: 15px 22px;
   border-radius: 999px;
-  background: #145b43;
-  color: #ffffff;
+  background: linear-gradient(135deg, #145b43 0%, #147789 100%);
+  color: #fff;
   font-size: 16px;
-  box-shadow: 0 12px 30px rgba(20, 91, 67, 0.22);
 }
 
 .about-content p:last-child strong {
   color: inherit;
+}
+
+/* SZCZEGÓŁY OFERTY I GALERIA */
+
+.offer-detail-section {
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f2e8;
+}
+
+.offer-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.offer-gallery {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.offer-detail-photo {
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #e9eee9;
+  box-shadow: 0 22px 60px rgba(31, 54, 45, 0.18);
+}
+
+.offer-detail-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.offer-detail-panel {
+  min-width: 0;
+  width: 100%;
+}
+
+.offer-gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.offer-gallery-thumb {
+  width: 100%;
+  height: 90px;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.offer-gallery-thumb:hover {
+  transform: translateY(-2px);
+}
+
+.offer-gallery-thumb.is-active {
+  border-color: var(--green-light);
+}
+
+.offer-gallery-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.offer-gallery-thumb:hover img {
+  transform: scale(1.05);
+}
+
+.image-load-failed {
+  object-fit: contain !important;
+  padding: 24px;
+  opacity: 0.72;
+}
+
+.offer-detail-points a {
+  color: var(--lake-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.auto-offer-loading {
+  animation: offer-loading-pulse 1.1s ease-in-out infinite alternate;
+}
+
+@keyframes offer-loading-pulse {
+  from { opacity: 0.58; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 950px) {
+  .offer-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-detail-photo {
+    height: 430px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1494,9 +1574,18 @@ textarea:focus {
     padding: 60px 0;
   }
 
+  .about-section::after,
+  .about-content::after {
+    display: none;
+  }
+
   .about-content {
     padding: 35px 24px;
     border-radius: 26px;
+  }
+
+  .about-content h2 {
+    font-size: 38px;
   }
 
   .about-content p {
@@ -1513,84 +1602,9 @@ textarea:focus {
     border-radius: 18px;
     line-height: 1.5;
   }
-}/* ===== SZCZEGÓŁY OFERTY - GALERIA ===== */
 
-.offer-detail-section {
-  padding: 70px 0;
-  overflow: hidden;
-}
-
-.offer-detail-grid {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr) !important;
-  gap: 42px !important;
-  align-items: start !important;
-}
-
-.offer-gallery {
-  width: 100% !important;
-  min-width: 0 !important;
-  overflow: hidden !important;
-}
-
-.offer-detail-photo {
-  width: 100% !important;
-  height: 560px !important;
-  overflow: hidden !important;
-  border-radius: 30px !important;
-  background: #e9eee9;
-}
-
-.offer-detail-photo img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  object-fit: cover !important;
-}
-
-.offer-detail-panel {
-  min-width: 0 !important;
-  width: 100% !important;
-}
-
-.offer-gallery-thumbs {
-  display: grid !important;
-  grid-template-columns: repeat(5, 1fr) !important;
-  gap: 10px !important;
-  margin-top: 14px !important;
-}
-
-.offer-gallery-thumb {
-  width: 100% !important;
-  height: 90px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  cursor: pointer !important;
-  background: transparent !important;
-}
-
-.offer-gallery-thumb img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  transition: transform 0.2s ease !important;
-}
-
-.offer-gallery-thumb:hover img {
-  transform: scale(1.05);
-}
-
-@media (max-width: 950px) {
-  .offer-detail-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .offer-detail-photo {
-    height: 430px !important;
+  .contact-heading {
+    padding: 22px;
   }
 }
 
@@ -1600,16 +1614,24 @@ textarea:focus {
   }
 
   .offer-detail-photo {
-    height: 300px !important;
-    border-radius: 20px !important;
+    height: 300px;
+    border-radius: 20px;
   }
 
   .offer-gallery-thumbs {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .offer-gallery-thumb {
-    height: 75px !important;
+    height: 75px;
+  }
+
+  .offer-detail-panel {
+    padding: 26px;
+    border-radius: 24px;
   }
 }
+
+#offer-detail {
+  min-height: calc(100vh - 148px);
 }
